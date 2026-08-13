@@ -32,9 +32,11 @@ export class Strip {
     return this.#pages[pageNumber - 1];
   }
 
-  randomize(): string {
+  randomize(): this {
     const randomPage = Math.floor(Math.random() * this.#pages.length) + 1;
-    return this.flip(randomPage);
+    this.flip(randomPage);
+
+    return this;
   }
 
   #validatePage(pageNumber: number) {
