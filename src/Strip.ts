@@ -2,9 +2,9 @@ export class Strip {
   readonly #pages: readonly string[];
   #currentPage: number;
 
-  constructor(pages: string[], page: number = 1) {
+  constructor(pages: string[], pageNumber: number = 1) {
     this.#pages = Object.freeze([...pages]);
-    this.#currentPage = page;
+    this.#currentPage = pageNumber;
   }
 
   get pages(): readonly string[] {
